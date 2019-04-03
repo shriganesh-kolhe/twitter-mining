@@ -10,6 +10,7 @@ import re
 import tweepy 
 from tweepy import OAuthHandler 
 from textblob import TextBlob 
+import config
   
 class TwitterClient(object): 
     ''' 
@@ -20,10 +21,10 @@ class TwitterClient(object):
         Class constructor or initialization method. 
         '''
         # keys and tokens from the Twitter Dev Console 
-        consumer_key = 'XH1zKQrO9D2Id9xpmXCzNlCFj'
-        consumer_secret = 'JpZjC4ogv4lMLmmu4G5JWS2TS5Cd3mP4S5EvvaaJ1LsnLdgNah'
-        access_token = '288194131-Q4LUkp2UXVwB4e0jgXhygjtYe2uCoj2P63Oprfnc'
-        access_token_secret = 'NRLJEqPmYYwduh26J9sVK6bY1odMdR43hBFPdJJgeCVN2'
+        consumer_key = config.consumer_key
+        consumer_secret = config.consumer_secret
+        access_token = config.access_token
+        access_token_secret = config.access_token_secret
   
         # attempt authentication 
         try: 
